@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 포트폴리오</title>
+    <!-- viewport -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <!-- fullpage plugin css -->
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!-- swiper plugin css -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="css/main.css">                
+    <!-- jquery library -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <!-- fullpage plugin js -->
+    <script src="js/jquery.fullPage.js"></script>
+    <!-- swiper plugin js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- 외부 js 얘는 제일 마지막에! 연결하기 -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        
+        <!-- id home은 메뉴의 #home과 연동, class="section"은 full page플러그인에서 사용 -->
+        <section class="section home" id="mo-home">
+            <div class="header">
+                <div class="menu1">
+                    <div class="navbar-brand" >
+                        <div class="circle circle1"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="#">
+                            <svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <!-- #은 가짜링크아니고 ID란뜻 -->
+                        <li data-menuanchor="home">
+                            <a href="#home" class="active">Home</a></li>
+                        <li data-menuanchor="profile"><a href="#profile">Profile</a></li>
+                        <li data-menuanchor="portfolio"><a href="#portfolio">Frontend</a></li>
+                        <li data-menuanchor="portfolio2"><a href="#portfolio2">Backend</a></li>
+                    </ul>
+                </div>
+            </div><!-- 인트로 -->
+            <div layout:fragment="content" class="content idx d-flex ms-auto justify-content-center align-items-center ">
+                <div class="container-fluid" id="outer-div">
+                    <div class="idx-bg"></div>
+                    <div class="heading-img">
+                        <img src="img/mimo8.png" alt="메인 그림">
+                    </div>
+                    <div class="heading">
+                    <div>
+                        <p class="slide-up"><span class="green">안녕하세요!<br>백엔드 개발자 최지민입니다.</span></p>
+                    </div>
+                    <div>
+                        <a href="#profile" class="slide-up">ABOUT ME</a>
+                    </div>
+        
+                </div>
+                </div>
+            </div>
+          
+
+        </section>
+        <section class="section profile" id="mo-profile">
+            <div class="header">
+                <div class="menu1">
+                    <div class="navbar-brand" >
+                        <div class="circle circle1"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="#">
+                            <svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <!-- #은 가짜링크아니고 ID란뜻 -->
+                        <li data-menuanchor="home">
+                            <a href="#home" class="active">Home</a></li>
+                        <li data-menuanchor="profile"><a href="#profile">Profile</a></li>
+                        <li data-menuanchor="portfolio"><a href="#portfolio">Frontend</a></li>
+                        <li data-menuanchor="portfolio2"><a href="#portfolio2">Backend</a></li>
+                    </ul>
+                </div>
+            </div><!-- 인트로 -->
+            
+            <div layout:fragment="content" class="content prof flex-column justify-content-center align-items-center min-vh-75">
+                <div class="container-fluid profile">
+                    <div class="profile-top profin">
+                        <div class="myinfo flex-col">
+                            <img src="/img/mimo7.png" alt="me">
+                            <h4>JIMIN CHOI</h4>
+        
+                        </div>
+                        <div class="edu-info">
+                            <div class="intro">
+                                <h2>변화에 유연하게 적응하며 성장하는 개발자</h2>
+                                <p>비전공자로서 백엔드 개발을 배우기 위해 꾸준히 노력하고 학습합니다.</p>
+                                <p>개발자로서의 전문성을 높이기 위해 열린 마인드로 새로운 기술을 배우고 적용하고자 합니다.</p>
+                                <p>사용자가 쉽게 사용할 수 있고, 도움이 되는 기능을 구현하고자 합니다.</p>
+                            </div>
+                            <div class="intro">
+                                <p>
+                                    <img src="/img/icon-grad.png">
+                                    <span>학 력</span>이화여자대학교 약학과 석사 졸업 / 목원대학교 의생명과학과 졸업
+                                </p>
+                                <p>
+                                    <img src="/img/icon-email.png">
+                                    <span>이메일</span>jim8190@naver.com
+                                </p>
+                                <p>
+                                    <img src="/img/icon-phone.png">
+                                    <span>연락처</span>010-9189-1578
+                                </p>
+                                <p>
+                                    <img src="/img/icon-file.png">
+                                    <span>이력서</span>파일 다운로드
+                                </p>
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="profile-bottom">
+                        <h2><img src="/img/icon-notebook.png">한 눈에 보는 이력</h2>
+                        <div class="bottom-wrap profin">
+                            <div class="academic">
+                                <h3><img src="/img/icon-scroll.png">교육과정</h3>
+                                    <table>
+                                        <tr>
+                                            <th><p>과정명</p><br>&nbsp;</th>
+                                            <td><p>JAVA, Spring 기반 데이터 융합 웹 개발자 과정 A</p></td>
+                                        </tr>
+                                        <tr style="height:30px;">
+                                            <th><p>기간</p></th>
+                                            <td><p>2024.06.24 ~ 2024.12.10</p></td>
+                                        </tr>
+                                        <tr style="height:30px;">
+                                            <th><p>기관</p></th>
+                                            <td><p>연희직업전문학교</p></td>
+                                        </tr>
+                                    </table>
+                            </div>
+                            <div class="skills">
+                                <h3><img src="/img/icon-scroll.png">스킬</h3>
+                                <p style="background-color: #FAF4DB;">HTML5</p>
+                                <p style="background-color: #D4E6F2;">CSS3</p>
+                                <p style="background-color: #FFE2DE;">JavaScript</p>
+                                <p style="background-color: #DEFFE0;">jQuery</p>
+                                <p style="background-color: #EDDBFA;">MySQL</p>
+                                <p style="background-color: #FAF4DB;">JSP</p>
+                                <p style="background-color: #D4E6F2;">Spring Boot3</p>
+                            </div>
+                            <div class="certificate">
+                                <h3><img src="/img/icon-scroll.png">자격증</h3>
+                                <table>
+                                    <tr>
+                                        <th><p>2024.08</p></th>
+                                        <td><p>정보처리기사(필기) 합격</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>2014.06</p></th>
+                                        <td><p>Mos Master</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="charac">
+                                <h3><img src="/img/icon-scroll.png">특징</h3>
+                                <p style="background-color: #FAF4DB;">긍정적</p>
+                                <p style="background-color: #D4E6F2;">책임감</p>
+                                <p style="background-color: #FFE2DE;">신속함</p>
+                                <p style="background-color: #DEFFE0;">자기 발전</p>
+                                <p style="background-color: #EDDBFA;">운동</p>
+                                <p style="background-color: #FAF4DB;">게임</p>
+                                <p style="background-color: #D4E6F2;">독서</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section portfolio" id="mo-portfolio">
+            <div class="header">
+                <div class="menu1">
+                    <div class="navbar-brand" >
+                        <div class="circle circle1"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="#">
+                            <svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <!-- #은 가짜링크아니고 ID란뜻 -->
+                        <li data-menuanchor="home">
+                            <a href="#home" class="active">Home</a></li>
+                        <li data-menuanchor="profile"><a href="#profile">Profile</a></li>
+                        <li data-menuanchor="portfolio"><a href="#portfolio">Frontend</a></li>
+                        <li data-menuanchor="portfolio2"><a href="#portfolio2">Backend</a></li>
+                    </ul>
+                </div>
+            </div><!-- 인트로 -->
+            <div layout:fragment="content" class="content portfolio">
+                <div class="container-fluid">
+                    <h2><img src="/img/icon-mark.png">프론트엔드 프로젝트 (총 2개)</h2>
+                    <div class="swiper portSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide project-detail">
+                                <div class="port-main-text"><span>개인 프로젝트</span><h4>수성아트피아 리뉴얼 홈페이지</h4></div>
+                                <div class="port-wrap flex-col">
+                                    <div class="port flex-row">
+                                        <div class = "port-img flex-col">
+                                            <div class="up-img imgbox">
+                                                <img src="/img/suseong.png" alt="포트폴리오">
+                                                <img src="/img/suseong2.png" alt="포트폴리오">
+                                            </div>
+                                            <div class="down-img imgbox">
+                                                <img src="/img/suseong1.png" alt="포트폴리오">
+                                                <img src="/img/suseong4.png" alt="포트폴리오">
+                                            </div>
+                                        </div>
+                                        <div class="port-in flex-col">
+                                            <h4>엘르 홈페이지의 디자인을 참고하여<br> 수성아트피아의 리뉴얼 홈페이지를 제작</h4>
+                                            <ul>
+                                                <li>원본 : 수성아트피아(https://www.ssartpia.kr/)</li>
+                                                <li>벤치마킹 : 엘르(https://www.elle.co.kr/)</li>
+                                                <li>Skill : HTML5 + CSS3 + jQuery</li>
+                                                <li>통합개발환경(IDE) : Visual studio code</li>
+                                                <li>개발기간 : 약 2주</li>
+                                            </ul>
+                                            <div class="btn">
+                                                <button type="button" onclick="window.open('http://jim2024.dothome.co.kr/suseong/', '_blank');">바로가기</button>
+                                                <a href="/pdf/suseong-proposal.pdf" download>기획서 다운로드</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-detail">
+                                <div class="port-main-text"><span>개인 프로젝트</span><h4>아모레퍼시픽 리뉴얼 홈페이지</h4></div>
+                                <div class="port-wrap flex-col">
+                                    <div class="port flex-row">
+                                        <div class = "port-img flex-col" style="margin:50px auto">
+                                            <div class="up-img imgbox">
+                                                <img src="/img/amore1.png" alt="포트폴리오">
+                                                <img src="/img/amore2.png" alt="포트폴리오">
+                                            </div>
+                                            <div class="down-img imgbox">
+                                                <img src="/img/amore3.png" alt="포트폴리오">
+                                                <img src="/img/amore5.png" alt="포트폴리오">
+                                            </div>
+                                        </div>
+                                        <div class="port-in flex-col" >
+                                            <h4>신세계 백화점 홈페이지의 디자인을 참고하여<br> 아모레퍼시픽몰의 리뉴얼 홈페이지를 제작</h4>
+                                            <ul>
+                                                <li>원본 : 신세계백화점 (https://www.shinsegae.com/index.do/)</li>
+                                                <li>벤치마킹 : 아모레퍼시픽몰(https://www.amoremall.com/kr/ko/display/main/)</li>
+                                                <li>Skill : HTML5 + CSS3 + jQuery</li>
+                                                <li>통합개발환경(IDE) : Visual studio code</li>
+                                                <li>개발기간 : 약 3주</li>
+                                            </ul>
+                                            <div class="btn">
+                                                <button type="button" onclick="window.open('http://som2024.dothome.co.kr/amore/', '_blank');">바로가기</button>
+                                                <a href="/pdf/amore-proposal.pdf" download>기획서 다운로드</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+            
+            
+                </div>
+            </div>
+        </section>
+        <section class="section portfolio2" id="mo-portfolio2">
+            <div class="header">
+                <div class="menu1">
+                    <div class="navbar-brand" >
+                        <div class="circle circle1"></div>
+                        <div class="circle circle2"></div>
+                        <div class="circle circle3"></div>
+                    </div>
+                    <div class="menu_icon">
+                        <a href="#">
+                            <svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 12H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 19H21" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <!-- #은 가짜링크아니고 ID란뜻 -->
+                        <li data-menuanchor="home">
+                            <a href="#home" class="active">Home</a></li>
+                        <li data-menuanchor="profile"><a href="#profile">Profile</a></li>
+                        <li data-menuanchor="portfolio"><a href="#portfolio">Frontend</a></li>
+                        <li data-menuanchor="portfolio2"><a href="#portfolio2">Backend</a></li>
+                    </ul>
+                </div>
+            </div><!-- 인트로 -->
+            <div layout:fragment="content" class="content portfolio">
+                <div class="container-fluid">
+                    <h2><img src="/img/icon-mark.png">백엔드 프로젝트 (총 2개)</h2>
+                    <div class="swiper portSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide project-detail">
+                                <div class="port-main-text"><span>팀 프로젝트</span><h4>영화 예매 홈페이지</h4></div>
+                                <div class="port-wrap flex-col">
+                                    <div class="port flex-row">
+                                        <div class = "port-img flex-col">
+                                            <div class="up-img imgbox">
+                                                <img src="/img/gigabox.png" alt="포트폴리오">
+                                                <img src="/img/gigabox2.png" alt="포트폴리오">
+                                            </div>
+                                            <div class="down-img imgbox">
+                                                <img src="/img/gigabox3.png" alt="포트폴리오">
+                                                <img src="/img/gigabox4.png" alt="포트폴리오">
+                                            </div>
+                                        </div>
+                                        <div class="port-in flex-col">
+                                            <h4>영화정보 제공 및 영화 굿즈 판매를 위한<br>홈페이지 제작</h4>
+                                            <ul>
+                                                <li>팀원: 총 2명</li>
+                                                <li>개발기간 : 약 6주</li>
+                                                <li>Skill : JAVA, Spring Boot 3, gradle, JPA, QueryDSL, Thymeleaf</li>
+                                                <li>데이터베이스 : MySQL</li>
+                                                <li>통합개발환경(IDE) : 인텔리제이(IntelliJ)</li>
+                                                <li>라이브러리 : Swiper</li>
+                                                <li>영화, 스토어 : 네이버 API, CGV 웹 크롤링을 활용</li>
+                                            </ul>
+                                            <div class="btn">
+                                                <button type="button" onclick="window.open('http://54.174.26.109:8081/gigabox/index.jsp', '_blank');">바로가기</button>
+                                                <button type="button" onclick="window.open('https://youtu.be/3MW4lKYjGN4', '_blank');">시연영상보기</button>
+                                                <a href="/pdf/gigabox-proposal.pdf" download>기획서 다운로드</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            <div class="swiper-slide project-detail">
+                                <div class="port-main-text"><span>개인 프로젝트</span><h4>도서 쇼핑몰 프로젝트</h4></div>
+                                <div class="port-wrap flex-col">
+                                    <div class="port flex-row">
+                                        <div class = "port-img flex-col" style="margin:50px auto">
+                                            <div class="up-img imgbox">
+                                                <img src="/img/bookshop.png" alt="포트폴리오">
+                                                <img src="/img/bookshop2.png" alt="포트폴리오">
+                                            </div>
+                                            <div class="down-img imgbox">
+                                                <img src="/img/bookshop3.png" alt="포트폴리오">
+                                                <img src="/img/bookshop4.png" alt="포트폴리오">
+                                            </div>
+                                        </div>
+                                        <div class="port-in flex-col" >
+                                            <h4>최신도서를 소개하고, 관심도서를 찾아보는<br>도서 쇼핑몰 홈페이지 제작</h4>
+                                            <ul>
+                                                <li>개발기간 : 약 4주</li>
+                                                <li>Skill : JSP, HTML5, CSS3, jQuery, Ajax</li>
+                                                <li>데이터베이스 : MySQL</li>
+                                                <li>통합개발환경(IDE) : 이클립스(Eclipse)</li>
+                                                <li>라이브러리 : Swiper</li>
+                                                <li>빌드도구 : Tomcat9.0</li>
+                                            </ul>
+                                            <div class="btn">
+                                                <button type="button" onclick="window.open('http://54.174.26.109:8080/BookShop/index.jsp', '_blank');">바로가기</button>
+                                                <button type="button" onclick="window.open('https://youtu.be/aN_C9LwMxh4', '_blank');">시연영상보기</button>
+                                                <a href="/pdf/bookshop-proposal.pdf" download>기획서 다운로드</a>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+            
+            
+                </div>
+            </div>
+        </section>
+    </div>
+    <script data-cfasync="false" src="js/form-submission-handler.js"></script>
+</body>
+</html>

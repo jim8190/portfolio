@@ -1,0 +1,821 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+a {text-decoration: none; color: #111; display: block; font-family: 'SUIT-Regular';}
+img {width: 100%;}
+.wrap {width: 100%;}
+h2 {
+    margin-bottom: 10px;
+}
+h3 {
+    font-weight: 500;
+    line-height: 1.2;
+}
+body {
+    font-family: 'SUIT-Regular';
+    overflow-x:hidden ;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222;
+}
+
+.flex-row {
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+}
+.flex-col{
+    display:flex;
+    flex-flow:column nowrap;
+    align-items:center;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.header {
+    position: absolute;
+    left: 50%; top: 10px;
+    transform: translateX(-50%);
+    padding-left: 30px;
+    width:1820px;
+    height:40px;
+    border-radius: 10px 10px 0 0;
+    border:1px solid #ccc;
+    margin:15px auto 0;
+    overflow:hidden;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* 어떤페이지를 가도 헤더가 항상 맨앞에! */
+    z-index: 100;
+}
+.header .container-fluid {
+    justify-content:space-between;
+}
+.header .navbar-brand {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+    align-items:center;
+}
+.header .circle {
+    width:15px;
+    height:15px;
+    border-radius:15px;
+    border:1px solid #ddd;
+    margin-left:8px;
+}
+.header .circle1 {
+    background-color: #FF5352;
+}
+.header .circle2 {
+    background-color: #FFB429;
+}
+.header .circle3 {
+    background-color: #26C23A;
+}
+.header .logo a {
+    color: #fff;
+    text-align: center;
+  
+}
+.header .menu_icon {
+    display: none;
+} 
+.nav {
+    margin-right: 40px;
+}
+.nav ul {
+    display: flex;
+    
+}
+.nav ul li {
+    margin-left: 30px;
+}
+.nav ul li a { 
+    color: rgba(0, 0, 0, .55);
+    font-size: 16px;
+}
+/* 이 active가 반영되려면 class="active"만들어야함 그것만 active 반영 */
+.nav ul li:hover a,
+.nav ul li.active a {
+    color: #222;
+}
+.nav .close {display: none;}
+section {
+    background-color: #E9E0F0;
+}
+
+.content {
+    width:1820px;
+    height:91vh;
+    background-color:#fff;
+    border:1px solid #ccc;
+    border-radius: 0 0 10px 10px ;
+    overflow:hidden;
+    margin:20px auto 20px;
+}
+/* index */
+.idx .container-fluid {
+    position:relative;
+    height:100%;
+    width:100%;
+}
+.idx .idx-bg {
+    width:100%;
+    height:50%;
+    background-color: #E9E0F0;
+    position:absolute;
+    z-index:0;
+}
+#outer-div {
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: space-between;
+}
+
+::selection {
+  background: rgba(170, 170, 170, 0.3);
+}
+
+.heading {
+  height: 250px;
+  margin: auto 0;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.heading > div > a {
+  display:inline-block;
+  border-radius:20px;
+  border: 1px solid #ccc;
+  font-weight:300;
+  padding:5px 10px;
+  white-space: nowrap;
+  margin: 20px 0 0 0;
+  font-size: 16px;
+  margin: 10px 0 10px 0;
+  color: #444;
+  text-decoration:none;
+}
+
+.green {
+  color: #222;
+  font-weight:700;
+  line-height: 150%;
+  font-size: 40px;
+  margin: 0 0 10px 0;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slide-up 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes slide-up2 {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-up2 {
+  animation: slide-up2 0.85s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+
+/* Animation delay for specific divs */
+.heading > div:nth-child(2) > p {
+  animation-delay: 0.05s; /* 2 * 0.025s */
+}
+
+.heading > div:nth-child(3) > p {
+  animation-delay: 0.075s; /* 3 * 0.025s */
+}
+.heading-img {
+    margin: auto 0;
+    width:300px;
+    height:300px;
+    overflow: hidden;
+    border-radius:300px;
+    border:3px solid #888;
+    position:relative;
+    z-index:1;
+    left: 150px;
+}
+.heading-img > img {
+    width:300px;
+    object-fit:cover;
+}
+/* 첫번째 section에 글자 타이핑 애니메이션 넣기 */
+.home {
+        background-color: #E9E0F0;
+}
+
+
+/*프로필 꾸미기*/
+.prof {
+    padding:0 100px;
+ }
+ .prof h2 {
+     width:100%;
+     height:40px;
+     font-size:25px;
+     background-color: #E9E0F0;
+     font-weight:700;
+     padding-top:3px;
+     padding-left:5px;
+     border-radius:2px;
+ }
+ .prof h2 img {
+     width:25px;
+     margin: 0 5px;
+ }
+ .prof h3 {
+     font-size:22px;
+     margin:10px 0 20px;
+ }
+ .prof h3 img {
+     width:25px;
+     margin: 0 5px;
+ }
+ .prof .profile .profin {
+     width: 100%;
+     display:flex;
+     flex-flow:row nowrap;
+     align-items: top;
+ }
+ .prof .profile h4 {
+     font-size: 18px;
+     background-color: #f5f5f5;
+     padding: 3px 20px;
+     margin-top: 20px;
+ }
+ .profile-top {
+     margin:50px 0 50px;
+ }
+ .myinfo {
+     width:30%;
+ }
+ .myinfo img {
+     width:250px;
+ }
+ .edu-info {
+     width:70%;
+     margin-top: 30px;
+ }
+ .edu-info p {
+     font-size:18px;
+     margin-bottom:5px;
+ }
+ .prof p img {
+     width:25px;
+     margin: 0 5px;
+ }
+ .edu-info .intro{
+     border-bottom : 1px solid #ccc;
+     padding: 10px 0;
+ }
+ .edu-info .intro p span {
+     width: 70px;
+     text-align:center;
+     margin-right:20px;
+     display:inline-block;
+ }
+ 
+ .bottom-wrap > div {
+     width:calc(100% / 4);
+     padding: 0 20px;
+     margin-right: 70px;
+ }
+ .bottom-wrap div:last-child{
+     margin-right: 0px;
+ }
+ .bottom-wrap p {
+     font-size:18px;
+     display:inline-block;
+ }
+ .bottom-wrap table {
+     width:100%;
+     font-size: 17px;
+ }
+ .bottom-wrap table tr {
+     width:100%;
+ }
+ .bottom-wrap table tr th {
+     width:20%;
+     height:100%;
+     padding:0;
+ }
+ .bottom-wrap table tr th p {
+     white-space:nowrap;
+     width:70px;
+     text-align:center;
+     font-size: 17px;
+     font-weight:200;
+     background-color: #F2F2F2;
+     color:#FC5856;
+ }
+ .bottom-wrap table tr td {
+     width:80%;
+     height:100%;
+     text-align:left;
+     padding:0 0 0 10px;
+ }
+ .bottom-wrap table tr td p {
+     font-size: 17px;
+ }
+ 
+ .bottom-wrap .skills p {
+     width: 130px;
+     border-radius:3px;
+     text-align:center;
+     margin-right:20px;
+     font-size: 17px;
+ }
+ .bottom-wrap .charac p {
+     padding:0 10px;
+     display:inline-block;
+     border-radius:3px;
+     text-align:center;
+     margin-right:20px;
+     font-size: 17px;
+ }
+ 
+ /*포트폴리오 꾸미기*/
+.portfolio .port-wrap {
+    margin:0 50px;
+}
+.portfolio h2, .portfolio2 h2 {
+    height:40px;
+    font-size:25px;
+    background-color: #E9E0F0;
+    font-weight:700;
+    padding-top:3px;
+    padding-left:5px;
+    border-radius:2px;
+    margin:40px 50px 0;
+}
+.portfolio .port-main-text {
+    height: 40px;
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    justify-content:left;
+    border: 1px solid #ccc;
+    margin: 20px 50px;
+}
+.portfolio .port-main-text h4, .portfolio2 .port-main-text h4 {
+    font-size:18px;
+    display:inline-block;
+    text-align:center;
+    font-weight: 100;
+    height: 100%;
+    line-height: 2;
+}
+.portfolio .port-main-text span, .portfolio2 .port-main-text span {
+    height: 100%;
+    font-size:18px;
+    width: 150px;
+    text-align:center;
+    margin-right:20px;
+    display:inline-block;
+    background-color: #F2F2F2;
+    color:#FC5856;
+    line-height: 2;
+}
+.portfolio h2 img, .portfolio2 h2 img {
+    width:25px;
+    margin: 0 5px;
+}
+.portfolio h4 img, .portfolio2 h4 img {
+    width:25px;
+    margin: 0 5px;
+}
+
+.port-wrap {
+    margin:0 50px;
+}
+.port {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing:border-box;
+    /*앞:좌우(플러스가 오른쪽), 두번쨰:상하(플러스가 아래), 세번쨰: 번짐정도, 마지막(색상)*/
+    box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.port .port-img {
+    margin:20px auto;
+    width:60%;
+
+}
+.port .port-img .imgbox {
+     display:flex;
+     flex-flow:row nowrap;
+     justify-content:center;
+}
+.port .port-img .imgbox img {
+    width:45%;
+    object-fit:contain;
+    margin: 5px 5px;
+    border-top:1px solid #E4E3E1;
+    border-left:1px solid #E4E3E1;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+}
+.port .port-in {
+    width:40%;
+    margin: 20px auto 0;
+    
+}
+.port-in h4 {
+    width: 87%;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+    color: #425285;
+}
+.port-in ul {
+    width: 80%;
+}
+.port ul li {
+    list-style:square;
+    margin-bottom : 5px;
+}
+
+.port .port-in .btn {
+    margin-top: 40px;
+    display:flex;
+    flex-flow:row nowrap;
+}
+
+.port .btn a {
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0 8px;
+    line-height: 2.2;
+    text-decoration:none;
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    border-radius:20px;
+    border:1px solid #222;
+    background-color: #2e2e2e;
+}
+.port .btn button {
+    font-size: 16px;
+    margin-right:10px;
+    width: 120px;
+    height: 40px;
+    border-radius:20px;
+    border:1px solid #222;
+    background-color: #fff;
+    line-height: 2.2;
+}
+
+.swiper {
+    width: 100%;
+    height: 800px;
+ }
+ 
+ .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+ }
+ .swiper-button-prev {
+    color: #222;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    border:1px solid #ddd;
+    background-color: #fff;
+    top: 45%;
+    left: 20px;
+ }
+ .swiper-button-next {
+    color: #222;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    border:1px solid #ddd;
+    background-color: #fff;
+    top: 45%;
+    right: 20px;
+ }
+ .swiper-button-prev::after {
+    font-size: 20px;
+    width: 15px;
+ }
+ .swiper-button-next::after {
+    font-size: 20px;
+    width: 10px;
+ }
+ 
+ 
+
+
+footer {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #6482ad;
+    color: #cfcfcf;
+}
+/* 브라우저 화면 오른쪽의 navigation의 마지막 메뉴 숨김 - footer 숨기려고 */
+/* 오른쪽 navigation이름은 아이디:fp-nav라고 정해져있음(우리가 정하지 않음) */
+
+#fp-nav ul li {
+    margin: 20px;
+    margin-right: 0;
+}
+#fp-nav ul li a span {
+    background-color: transparent;
+    background-image: url(../img/round.svg);
+    background-size: cover;
+    width: 10px;
+    height: 10px;
+    margin: -8px 0 0 -8px;
+     
+}
+#fp-nav ul li a.active span {
+    background-image: url(../img/done.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin: -14px 0 0 -14px;
+}
+
+#top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1a4076;
+    color: white;
+    text-align: center;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+/* 태블릿 가로 버전  */
+@media screen and (max-width:1279px) {
+    header { padding : 0 9.3%; height: 40px;}
+    header .logo {width: 100px; height: 30px;}
+    header .logo a {line-height: 30px;}
+    nav {right: 9%; top:11px;}
+    nav ul li {margin-left: 70px;}
+    nav ul li a {font-size: 16px;}
+
+
+    .portfolio .swiper_box {width: 91%;}
+    .portfolio .swiper_box .swiper {width: 90%;}
+    .portfolio .swiper_box .swiper .swiper-slide {
+        height: 55vh;
+    }
+    .portfolio .swiper_box .swiper-button-next,
+    .portfolio .swiper_box .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+    .profile .profile_box {
+        width: 81%;
+        font-size: 16px;
+    }
+    .email .email_box {
+        width: 81%;
+    }
+}
+/* 태블릿 세로 버전 */
+@media screen and (max-width:767px) {
+    .portfolio .swiper_box {width: 96%;}
+    .portfolio .swiper_box .swiper {width: 86%;}
+    .portfolio .swiper_box .swiper .swiper-slide {
+        height: 50vh;
+    }
+    .profile .profile_box{
+        flex-flow: column nowrap;
+    }
+    /* div 가 많아서 꼭 부등호해야해 */
+    .profile .profile_box > div {
+        width: 100%;
+        margin: 2vh auto;
+        padding: 4vw;
+    }
+    .profile .profile_box > div h2 {
+        font-size: 20px;
+        width: 100%;
+    }
+    .profile .profile_box .me {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .profile .profile_box .my_photo {
+        width: 26%;
+        margin: 20px 0 0 0;
+        height: 50%;
+    }
+    .profile .profile_box .txt {
+        width: 58%;
+        line-height: 24px;
+        /* text-indent -> 음수면 내어쓰기, 양수면 들여쓰기 */
+        text-indent: -65px;   
+    }
+    .container-skillbar {
+        padding-top:0;
+    }
+    .skillbar {
+        height: 24px;
+        margin-bottom: 10px;
+        
+    }
+    .skillbar-title span {
+        height: 100%;
+        line-height: 24px;
+        white-space: nowrap;
+    }
+    .skillbar-bar {
+        height: 100%;
+    }
+    .skill-bar-percent {height: 20px; line-height: 20px;}
+    .email .email_box {
+        width: 82%;
+        flex-flow:column nowrap;
+    }
+    .email .email_box > div:first-child {
+        width: 100%;
+        margin-top: 100px;
+        order: 2; /*뭔가 먼저 올지 순서 바꿀수 있음. 얘네 밑으로 내려감*/
+        background-color: transparent;
+    }
+    .email .email_box > div:last-child {
+        width: 100%;
+        order: 1;
+    }
+    
+}
+
+/* 모바일 버전 */
+@media screen and (max-width:480px) {
+    header {
+        width: 100%; 
+        padding:0;
+        display: flex;
+        justify-content: space-between;
+    }
+    header .logo {
+        margin-left: 3px;
+    }
+    section.home .creative__text--animation-3 {
+        font-size: 55px;
+    }
+    nav {
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: #496d9c;
+        padding: 6vw 4vw 0 8vw;
+    }
+    nav .close {
+        width: 30px;
+        float: right;
+        display: block;
+    }
+    nav ul {
+        flex-flow: column nowrap;
+    }
+    nav ul li {
+        margin-left: 0;
+        
+    }
+    nav ul li a {
+        padding: 20px 0;
+        font-size: 20px;
+    }
+    
+    header .menu_icon {
+        /* 모바일 버전에서는 메뉴아이콘 보임 */
+        display: block;
+        margin-right: 2%;
+        width: 30px;
+        height: 30px;
+    }
+    header .menu_icon svg {
+        width: 100%; height: 100%;
+    }
+    section {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding: 4vw;
+    }
+    .home { 
+        width: 100%;
+        /* 내가 접속한 기기에 맞춰서 넣는거 100vh는 100퍼센트 꽉 차게임 */
+        height: 100vh;
+        padding: 0;
+        
+    }
+  
+    .portfolio {
+        width: 100%;
+        height: 100vh;
+    }
+    .portfolio h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    .portfolio .swiper_box {
+        width: 100%;
+    }
+    .portfolio .swiper_box .swiper {
+        width: 76%;
+    }
+    .portfolio .swiper_box .swiper-pagination .swiper-pagination-bullet {
+        width: 30px;
+    }
+    .profile .profile_box {
+        width: 100%;
+        height: 100vh;
+    }
+    .profile .profile_box > div {
+        width: 100%;
+        margin: 0 auto;
+        padding: 4vw;
+    }
+    .profile .profile_box .me {
+        flex-flow: column nowrap;
+        margin : 10px auto;
+    }
+    .profile .profile_box .me .my_photo {
+        margin: 0 auto;
+    }
+    .profile .profile_box .me .txt {
+        width:80%;
+        margin-left: 65px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    #fp-nav {
+        display: none;
+    }
+    .email .email_box {
+        width: 100%;
+    }
+    .email .email_box > div {
+        background-color: transparent;
+    }
+    .email .email_box label {
+        white-space: nowrap;
+    }
+    .email .email_box input {
+        width: 80%;
+    }
+    .email .email_box textarea {
+        width: 80%;
+    }
+    .email .email_box h2 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .email .email_box > div:first-child {
+        margin-top: -60px;
+        height: 280px;
+
+    }
+    .email .form-elements {
+        margin-top: 40px;
+    }
+    .letter-image {
+        scale : 0.7;
+        left: 45%;
+    }
+   
+}
